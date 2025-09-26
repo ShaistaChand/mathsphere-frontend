@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathsphere Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling - you can replace with your existing CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 120px; /* Added for fixed header */
+        }
+        
+        header {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        section {
+            padding: 60px 0;
+            scroll-margin-top: 100px; /* Added for anchor links with fixed header */
+        }
+        
+        .aboutus {
+            background-color: #1e5799;
+            color: white;
+            text-align: center;
+        }
+        
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .images img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .benefits-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .benefits-content, .benefits-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .location-contact-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .location, .contactus {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #4a5568;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- MODIFIED: Added IDs to sections and updated nav links -->
+    <header>
+        <div class="container">
+            <img src="./logo.jpg" alt="logo" width="110" height="100" class="d-inline-block align-text-top" id="logo">
+            <nav>
+                <ul>
+                    <!-- MODIFIED: Changed href to point to section IDs -->
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                    <li><a href="#enroll" class="nav-link">Enroll Now</a></li>
+                    <li><a href="#location" class="nav-link">Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <marquee width="60%" behavior="scroll" scrollamount="15" loop="infinite" direction="left"> 
+        <h2 style="color: rgb(24, 62, 12); margin-top: 25px;">Welcome to Mathsphere Academy</h2> 
+    </marquee>
+
+    <div class="images">
+        <img src="./public/images/photo1.jpg" alt="image1">
+        <img src="./public/images/photo2.jpg" alt="image2">
+        <img src="./public/images/photo3.jpg" alt="image3">
+    </div>
+
+    <!-- MODIFIED: Added section with ID for About -->
+    <section id="about" class="aboutus">
+        <div class="container">
+            <h3 style="color: rgb(24, 62, 12); text-align: center;">MathSphere Academy</h3>
+            <h6 style="color: rgb(241, 236, 227);">Mastering Middle School Mathematics and Science</h6>
+
+            <div class="aboutcontent">
+                <div class="teachingmethods">
+                    <p>
+                        MathSphere Academy specializes in transformative Math and Science education for Grades 8-10 students across all major boards:
+                        <span style="color: blue;">CBSE | ICSE | IGCSE | State Boards</span> <br>
+                        Our expert faculty demystifies complex concepts in Algebra, Geometry, Trigonometry, and Calculus through:
+                    </p>
+                    <ul>
+                        <li>Personalized Attention: Tailored learning paths for each student's pace and needs</li>
+                        <li>Concept Mastery: Deep understanding of core mathematical principles</li>
+                        <li>Board-Specific Mastery: Customized teaching methodologies for each curriculum</li>
+                        <li>Exam Excellence: Targeted preparation for term exams and board practicals</li>
+                        <li>Foundation Building: Bridging middle school math to senior-level challenges</li>
+                        <li>Real-World Applications: Connecting textbook concepts to everyday problem-solving</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="provenresults">
+                    With 2 years of proven results, <br> we've helped over 200 students: <br>
+                    ✓ Improve scores by 35% on average <br>
+                    ✓ Crack competitive exams like NTSE and Olympiads <br>
+                    ✓ Develop lifelong analytical thinking skills <br>
+                    From quadratic equations to probability theorems - we make math click for every learner. <br>
+                    Join us in our mission to empower students to thrive in the world of numbers and beyond. <br>
+                    Enroll now and let's dive into the fascinating world of mathematics together! <br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODIFIED: Added section with ID for Enroll -->
+    <section id="enroll" class="benefits">
+        <div class="container benefits-container">
+            <div class="benefits-content">
+                <h3 style="color: rgb(24, 62, 12);">Why MathSphere Academy Works</h3>
+                <ul class="benefits-list benefits-list-light">
+                    <li>Specialized focus on Grades 8-10 Mathematics and Science</li>
+                    <li>Comprehensive coverage of all major education boards</li>
+                    <li>Expert faculty with 10+ years teaching experience</li>
+                    <li>Small batch sizes for personalized attention</li>
+                    <li>Regular assessments and progress tracking</li>
+                    <li>Proven track record of academic improvement</li>
+                    <li>Focus on conceptual understanding over rote learning</li>
+                    <li>Preparation for competitive exams and Olympiads</li>
+                </ul>
+                <button class="cta-button" style="margin-top: 30px;">Enroll Now</button>
+            </div>
+            <div class="benefits-form">
+                <div class="form-title">
+                    <h3>Book a Free Demo Class</h3>
+                    <p>Experience our teaching methodology firsthand</p>
+                </div>
+                <form id="demo-form" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Student Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="grade" required style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                            <option value="">Select Grade</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="board" required style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                            <option value="">Select Education Board</option>
+                            <option value="cbse">CBSE</option>
+                            <option value="icse">ICSE</option>
+                            <option value="igcse">IGCSE</option>
+                            <option value="state">State Board</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit">Submit & Book a Free Demo</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODIFIED: Added section with ID for Location and Contact -->
+    <section id="location" class="location-contact">
+        <div class="container location-contact-container">
+            <div class="location">
+                <h3>Location</h3>
+                <p>MathSphere Academy is located in the heart of the city, with easy access to public transportation and ample parking facilities. Our campus is designed to provide a comfortable and conducive learning environment for students of all ages.</p>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; margin-right: 10px;"></i>
+                    <span>BTM 1st stage, Bannerghatta Road <br> Opp. to Huda School , Near Bilal Masjid <br> Bangalore 560029</span>
+                </div>
+            </div>
+            <div id="contact" class="contactus">
+                <h3>Contact Us</h3>
+                <p>For any inquiries or to schedule a consultation, please feel free to contact us using the information below:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div>Email</div>
+                            <div><a href="mailto:info@mathsphereacademy24.com" style="color: #3a7bd5; text-decoration: none;">info@mathsphereacademy24.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div>Phone</div>
+                            <div><a href="tel:+917259550228" style="color: #3a7bd5; text-decoration: none;">+917259550228</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <div>Working Hours</div>
+                            <div>Mon-Sat: 9:00 AM - 9:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MathSphere Academy</h4>
+                    <p style="color: #cbd5e1; max-width: 300px; text-align: left; margin-bottom: 20px;">Transforming Math and Science education for Grades 8-10 students across all education boards.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#enroll">Enroll Now</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Grade 8 Program</a></li>
+                        <li><a href="#">Grade 9 Program</a></li>
+                        <li><a href="#">Grade 10 Program</a></li>
+                        <li><a href="#">Board Exam Preparation</a></li>
+                        <li><a href="#">NTSE & Olympiad Training</a></li>
+                        <li><a href="#">Summer Crash Course</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> BTM 1st stage, Bannerghatta Road <br> Opp. to Huda School , Near Bilal Masjid <br> Bangalore 560029</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> +917259550228</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> info@mathsphereacademy24.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 10px;"></i> Mon-Sat: 9AM - 9PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 MathSphere Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODIFIED: Added JavaScript for single-page navigation -->
+    <script>
+        // Function to handle navigation and form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Get the target section
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    // Scroll to the section
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100, // Adjust for fixed header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Handle form submission
+            const demoForm = document.getElementById('demo-form');
+            if (demoForm) {
+                demoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Here you would typically send the form data to your backend
+                    // For this example, we'll just show an alert
+                    alert('Thank you for your interest! We will contact you shortly to schedule your demo class.');
+                    
+                    // Reset the form
+                    demoForm.reset();
+                });
+            }
+            
+            // Update active nav link based on scroll position
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= (sectionTop - 150)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
