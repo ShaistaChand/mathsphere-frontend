@@ -15,7 +15,8 @@ body{
     /* your existing body styles */
     line-height: 1.5;
     min-height: 100vh;
-    background: linear-gradient(90deg, rgb(157, 194, 150) 0%, rgb(145, 174, 130) 50%, rgb(144, 174, 139) 100%);
+    /* background: linear-gradient(90deg, rgb(157, 194, 150) 0%, rgb(145, 174, 130) 50%, rgb(144, 174, 139) 100%); */
+    background-color: #ffffff;
 }   
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +41,7 @@ header {
 }
 
 .nav-link {
-color: blue !important;
+color: rgb(102, 109, 245) !important;  
 font-weight: bold;
 }
 
@@ -249,7 +250,8 @@ section {
         }
 
 .benefits {
-            background: linear-gradient(90deg, rgb(157, 194, 150) 0%, rgb(145, 174, 130) 50%, rgb(144, 174, 139) 100%);
+            /* background: linear-gradient(90deg, rgb(157, 194, 150) 0%, rgb(145, 174, 130) 50%, rgb(144, 174, 139) 100%); */
+            background-color: #ffffff;
             padding: 80px 0;
             color: black;
         }
