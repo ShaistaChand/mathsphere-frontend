@@ -38,11 +38,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #9ABDDC;
 }
 
-.nav-link {
-color: rgb(102, 109, 245) !important;  
+.nav-link:hover {
+/* color: rgb(102, 109, 245) !important;   */
+color: #282C35 !important;
 font-weight: bold;
+background-color: #FFAA33;
+border-radius: 10px;
+}
+
+#nav-logo {
+    width: 120px;
+    border-radius: 15%; 
+    border: 2.5px solid yellow;
 }
 
 #logo {
@@ -50,7 +60,7 @@ font-weight: bold;
    margin-top: 10px; 
     width: 120px;
     border-radius: 15%; 
-    border: 1px solid yellow;
+    border: 2.5px solid yellow;
 }
 
 #logo:hover {
@@ -91,7 +101,9 @@ nav ul li a {
 
 li:hover{
     /* color: white; */
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+    /* background-color: #FFAA33;	 */
+    border-radius: 10px;
     /* text-decoration: underline; */
 }
 
@@ -109,11 +121,13 @@ ul {
 }
 
 .nav-link{
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #282C35;
 }
 
 .nav-link:hover{
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #282C35;
     /* text-decoration: underline; */
 }
 
@@ -153,7 +167,7 @@ h2{
 .aboutus{
     margin-left: 5px;
     padding: 0px;
-    font-size: 30px;
+    font-size: 25px;
     color: #131111;
     /* border: 1px solid #131111; */
     
@@ -178,16 +192,17 @@ h6{
 .teachingmethods{
     /* border: 1px solid red; */
     border-radius: 15px;
-    background-color: rgb(239, 226, 226);
+    /* background-color: rgb(239, 226, 226); */
+    background-color: #E5F3FD;
     width: 50%;
-    font-family: cursive;
+    /* font-family: cursive; */
     margin-right: 20px;
     transform: scale(1.0);
     transition: 1s;
 }
 .aboutus p{
     /* margin-left: 10px; */
-    font-size: 25px;
+    font-size: 20px;
     /* color: #131111; */
     padding-left: 10px;
         
@@ -200,11 +215,12 @@ li {
 .provenresults{
     /* border: 1px solid red; */
     border-radius: 15px;
-    background-color: rgb(239, 226, 226);
+    background-color: #E5F3FD;
     width: 50%;
-    font-family: cursive;
-    font-size: 25px;
+    /* font-family: cursive; */
+    font-size: 20px;
     padding-left: 10px;
+    font-family: poppins, sans-serif;
     
 }
 
@@ -245,15 +261,17 @@ footer p {
 } */
 
 section {
-            padding: 60px 0;
+            /* padding: 60px 0; */
             scroll-margin-top: 100px; /* Added for anchor links with fixed header */
+            padding-top: 15px;
         }
 
 .benefits {
             /* background: linear-gradient(90deg, rgb(157, 194, 150) 0%, rgb(145, 174, 130) 50%, rgb(144, 174, 139) 100%); */
             background-color: #ffffff;
             padding: 80px 0;
-            color: black;
+            /* color: black; */
+            color: #282C35;
         }
         
         .benefits-container {
@@ -263,13 +281,21 @@ section {
         
         .benefits-content {
             flex: 1;
+            /* background-color: rgb(239, 226, 226); */
+            background-color: #E5F3FD;
+            width: 50%;
+            border-radius: 20px;
+            padding-left: 20px;
+            /* border: 1px solid yellow; */
         }
         
         .benefits-list benefits-list-light li {
             list-style: inside;
+            font-size: 25px;
         }
         .benefits-content h3 {
             font-size: 2rem;
+            margin-top: 15px;
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
@@ -287,18 +313,20 @@ section {
         }
         
         .benefits-list-light li {
-            color: black;
+            color: #282C35;
             margin-bottom: 15px;
             padding-left: 10px;
         }
         
         .benefits-form {
             flex: 1;
-            background-color: rgb(239, 226, 226);
+            /* background-color: rgb(239, 226, 226); */
+            background-color: #E5F3FD;
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-            color: rgb(24, 62, 12);
+            /* color: rgb(24, 62, 12); */
+            color: #282C35;
         }
         
         .form-title {
@@ -356,6 +384,7 @@ section {
         .location-contact {
             padding: 80px 0;
             background: var(--light);
+            font-size: 20px;
         }
         
         .location-contact-container {
@@ -365,7 +394,8 @@ section {
         
         .location, .contactus {
             flex: 1;
-            background-color: rgb(234, 239, 226);
+            /* background-color: rgb(234, 239, 226); */
+            background-color: #E5F3FD;
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -373,7 +403,8 @@ section {
         
         .location h3, .contactus h3 {
             font-size: 1.8rem;
-            color: rgb(24, 62, 12);
+            /* color: rgb(24, 62, 12); */
+            color: #282C35;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
@@ -404,7 +435,8 @@ section {
         .contact-icon {
             width: 40px;
             height: 40px;
-            background: rgba(26, 86, 219, 0.1);
+            /* background: rgba(26, 86, 219, 0.1); */
+            background: #D1E5F4;
             border-radius: 50%;
             display: flex;
             
@@ -414,7 +446,8 @@ section {
         }
         
         .map-placeholder {
-            background: #aadc96;
+            /* background: #aadc96; */
+            background: #BDD5E7;
             height: 250px;
             border-radius: 15px;
             margin-top: 20px;
@@ -426,7 +459,8 @@ section {
         
         .cta-button {
             background: orange;
-            color: white;
+            /* color: white; */
+            color: #282C35;
             padding: 10px 25px;
             border-radius: 30px;
             text-decoration: none;
@@ -445,7 +479,8 @@ section {
         }
 
         footer {
-            background: darkblue;
+            /* background: darkblue; */
+            background-color: #9ABDDC;
             color: white;
             padding: 40px 0 20px;
             text-align: center;
@@ -459,6 +494,7 @@ section {
             margin-bottom: 30px;
             flex-wrap: wrap;
             gap: 30px;
+            font-size: 20px;
         }
         
         .footer-section {
@@ -470,31 +506,38 @@ section {
             font-size: 1.2rem;
             margin-bottom: 20px;
             margin-right: 10px;
-            color: var(--accent);
+            /* color: var(--accent); */
+            color: #282C35;
             /* margin-right: 10px; */
+            font-size: 25px;
         }
 
         .footer-section p{
-            padding-left: 85px;
-        }
+            padding-left: 55px;
+            color: #282C35;
+                }
         
         .footer-links {
             list-style: none;
+            color: #282C35;
         }
         
         .footer-links li {
             margin-bottom: 10px;
+        
         }
         
         .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
+            /* color: #94a3b8; */
+            color: #282C35;
             transition: color 0.3s;
+            text-decoration-color: #ea580c;
+            text-decoration-style: dotted;
         }
         
-        .footer-links a:hover {
+        /* .footer-links a:hover {
             color: #94a3b8;
-        }
+        } */
         
         /* .social-icons {
             display: flex;
@@ -522,9 +565,10 @@ section {
         
         .copyright {
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #94a3b8;
-            font-size: 0.9rem;
+            border-top: 1px solid rgba(129, 127, 127, 0.807);
+            /* color: #94a3b8; */
+            color: #282C35;
+            font-size: 1.1rem;
         }
         
         @media (max-width: 992px) {

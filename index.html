@@ -33,7 +33,7 @@
     </header>
 
     <marquee width="60%" behavior="scroll" scrollamount="15" loop="infinite " direction="left">
-        <h2 style="color: rgb(24, 62, 12);" margin-top="25px"> Welcome to Mathsphere Academy </h2>
+        <h2 style="color: #282C35;" margin-top="25px"> Welcome to Mathsphere Academy </h2>
     </marquee>
 
     <div class="images">
@@ -43,15 +43,15 @@
     </div>
 
     <section id="about" class="aboutus">
-        <h3 style="color: rgb(24, 62, 12); text-align: center;">MathSphere Academy</h3>
-        <h6 style="color: rgb(102, 109, 245);">Mastering Middle School Mathematics and Science</h6>
+        <h3 style="color: #282C35; text-align: center; font-size: 35px;">MathSphere Academy</h3>
+        <h6 style="color: #124389;">Mastering Middle School Mathematics and Science</h6>
 
         <div class="aboutcontent">
             <div class="teachingmethods">
                 <p>
                     MathSphere Academy specializes in transformative Math and Science education for Grades 8-10 students
                     across all major boards:
-                    <span style="color: blue;">CBSE | ICSE | IGCSE | State Boards</span> <br>
+                    <span style="color: blue;">CBSE | ICSE | IGCSE | State Boards</span>
                     Our expert faculty demystifies complex concepts in Algebra, Geometry, Trigonometry, and Calculus
                     through:
                 </p>
@@ -127,7 +127,7 @@ Ends with a memorable tagline <br>
     <section class="benefits" id="enroll">
         <div class="container benefits-container">
             <div class="benefits-content">
-                <h3 style="color: rgb(24, 62, 12);">Why MathSphere Academy Works</h3>
+                <h3 style="color:#282C35;">Why MathSphere Academy Works</h3>
                 <ul class="benefits-list benefits-list-light">
                     <li>Specialized focus on Grades 8-10 Mathematics and Science</li>
                     <li>Comprehensive coverage of all major education boards</li>
@@ -147,16 +147,16 @@ Ends with a memorable tagline <br>
                 </div>
                 <form id="demo-form" action="https://www.mathsphereacademy.com/" method="post">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Student Name" required>
+                        <input type="text" name="Student Name" placeholder="Student Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="email" name="Email Address" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="tel" name="Phone Number" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <select class="form-group input" name="grade" required
+                        <select class="form-group input" name="Select Grade" required
                             style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
                             <option value="">Select Grade</option>
                             <option value="8">Grade 8</option>
@@ -165,7 +165,7 @@ Ends with a memorable tagline <br>
                         </select>
                     </div>
                     <div class="form-group">
-                        <select class="form-group input" name="board" required
+                        <select class="form-group input" name="Select Education Board" required
                             style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
                             <option value="">Select Education Board</option>
                             <option value="cbse">CBSE</option>
@@ -189,7 +189,7 @@ Ends with a memorable tagline <br>
                     ample parking facilities. Our campus is designed to provide a comfortable and conducive learning
                     environment for students of all ages.</p>
                 <div class="map-placeholder">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; margin-right: 10px;"></i>
+                    <i class="fas fa-map-marker-alt" style="font-size: 35px; margin-right: 10px;"></i>
                     <span>BTM 1st stage, Bannerghatta Road <br> Opp. to Huda School , Near Bilal Masjid <br> Bangalore
                         560029</span>
                 </div>
@@ -247,7 +247,7 @@ Ends with a memorable tagline <br>
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>MathSphere Academy</h4>
-                    <p style="color: #cbd5e1; max-width: 300px; text-align: left; margin-bottom: 20px; ">Transforming
+                    <p style="color: #282C35; max-width: 300px; text-align: left; margin-bottom: 20px; ">Transforming
                         Math and Science education for Grades 8-10 students across all education boards.</p>
                     <!-- <div class="social-icons">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -270,12 +270,12 @@ Ends with a memorable tagline <br>
                 <div class="footer-section">
                     <h4>Programs</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Grade 8 Program</a></li>
-                        <li><a href="#">Grade 9 Program</a></li>
-                        <li><a href="#">Grade 10 Program</a></li>
-                        <li><a href="#">Board Exam Preparation</a></li>
-                        <li><a href="#">NTSE & Olympiad Training</a></li>
-                        <li><a href="#">Summer Crash Course</a></li>
+                        <li>Grade 8 Program</li>
+                        <li>Grade 9 Program</li>
+                        <li>Grade 10 Program</li>
+                        <li>Board Exam Preparation</li>
+                        <li>NTSE & Olympiad Training</li>
+                        <li>Summer Crash Course</li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -351,18 +351,40 @@ Ends with a memorable tagline <br>
                     // Collect form data
                     const formData = new FormData(demoForm);
 
+                    // Convert FormData to JSON object
+                    const jsonData = {};
+                    formData.forEach((value, key) => {
+                      jsonData[key] = value;
+                    });
+
+                    console.log('Sending data:', jsonData); // ADD THIS LINE
+
+
                     // Send to your backend
-                    fetch('http://localhost:3000/api/demo-request', {
+                    fetch('https://mathsphere-academy.onrender.com/api/contact/demo-request', {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json', // 🔄 ADD THIS HEADER
+                        },
+                        body: JSON.stringify(jsonData)  
                     })
-                        .then(response => response.json())
-                        .then(data => {
-                            alert('Thank you! We will contact you soon.');
-                            demoForm.reset();
-                        })
+
+                    .then(response => {
+            console.log('Response status:', response.status); // ADD THIS
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data); // ADD THIS
+            alert('Thank you! We will contact you soon.');
+            demoForm.reset(); })
+            
+                        // .then(response => response.json())
+                        // .then(data => {
+                        //     alert('Thank you! We will contact you soon.');
+                        //     demoForm.reset();
+                        // })
                         .catch(error => {
-                            console.error('Error:', error);
+                            console.error('Full Error:', error);
                             alert('There was an error submitting your request. Please try again.');
 
                         });
