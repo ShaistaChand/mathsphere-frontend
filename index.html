@@ -369,21 +369,25 @@ Ends with a memorable tagline <br>
                         body: JSON.stringify(jsonData)  
                     })
 
-                    .then(data => {
-            console.log('Success:', data); // ADD THIS
-            alert('Thank you! We will contact you soon.');
-            demoForm.reset(); })
+              
 
                     .then(response => {
             console.log('Response status:', response.status); // ADD THIS
             return response.json();
-        })
+})
+
+        //   .then(data => {
+        //     console.log('Success:', data); // ADD THIS
+        //     alert('Thank you! We will contact you soon.');
+        //     demoForm.reset(); })
             
-                        // .then(response => response.json())
-                        // .then(data => {
-                        //     alert('Thank you! We will contact you soon.');
-                        //     demoForm.reset();
-                        // })
+                        .then(response => response.json())
+                         .then(data => {
+                             alert('Thank you! We will contact you soon.');
+                             demoForm.reset();
+                         })
+
+                         
                         .catch(error => {
                             console.error('Full Error:', error);
                             alert('There was an error submitting your request. Please try again.');
