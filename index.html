@@ -303,19 +303,19 @@ Ends with a memorable tagline <br>
             const navLinks = document.querySelectorAll('.nav-link');
 
             // Logo home link functionality
-    const homeLink = document.getElementById('home-link');
-    if (homeLink) {
-     homeLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-        
-        // Remove active class from all nav links
-        navLinks.forEach(l => l.classList.remove('active'));
-    });
-}
+            const homeLink = document.getElementById('home-link');
+            if (homeLink) {
+                homeLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+
+                    // Remove active class from all nav links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                });
+            }
 
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
@@ -354,7 +354,7 @@ Ends with a memorable tagline <br>
                     // Convert FormData to JSON object
                     const jsonData = {};
                     formData.forEach((value, key) => {
-                      jsonData[key] = value;
+                        jsonData[key] = value;
                     });
 
                     console.log('Sending data:', jsonData); // ADD THIS LINE
@@ -366,28 +366,27 @@ Ends with a memorable tagline <br>
                         headers: {
                             'Content-Type': 'application/json', // 🔄 ADD THIS HEADER
                         },
-                        body: JSON.stringify(jsonData)  
+                        body: JSON.stringify(jsonData)
                     })
 
-              
+                        .then(response => {
+                            console.log('Response status:', response.status); // ADD THIS
+                            return response.json();
+                        })
 
-                    .then(response => {
-            console.log('Response status:', response.status); // ADD THIS
-            return response.json();
-})
+                        .then(data => {
+                            console.log('Success:', data); // ADD THIS
+                            alert('Thank you! We will contact you soon.');
+                            demoForm.reset();
+                        })
 
-        //   .then(data => {
-        //     console.log('Success:', data); // ADD THIS
-        //     alert('Thank you! We will contact you soon.');
-        //     demoForm.reset(); })
-            
-                        .then(response => response.json())
-                         .then(data => {
-                             alert('Thank you! We will contact you soon.');
-                             demoForm.reset();
-                         })
+                        // .then(response => response.json())
+                        //  .then(data => {
+                        //      alert('Thank you! We will contact you soon.');
+                        //      demoForm.reset();
+                        //  })
 
-                         
+
                         .catch(error => {
                             console.error('Full Error:', error);
                             alert('There was an error submitting your request. Please try again.');
